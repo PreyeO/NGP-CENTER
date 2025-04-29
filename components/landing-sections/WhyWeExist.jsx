@@ -5,7 +5,10 @@ import Image from "next/image"; // Assuming you're using Next.js for image optim
 
 const WhyWeExist = () => {
   return (
-    <section className="relative py-20 bg-white overflow-hidden">
+    <section
+      className="relative py-20 bg-white overflow-hidden"
+      id="why-we-exist"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16">
         {/* IMAGE / VISUAL */}
         <motion.div

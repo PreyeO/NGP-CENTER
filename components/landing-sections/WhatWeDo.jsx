@@ -83,7 +83,7 @@ const WhatWeDo = () => {
         <motion.div whileHover={{ scale: 1.04 }} className="mt-16 text-center">
           <Link
             href="/services"
-            className="inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-emerald-700 transition"
+            className=" cursor-pointer inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-emerald-700 transition"
           >
             Learn More →
           </Link>

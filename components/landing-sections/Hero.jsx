@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { scroller } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -26,11 +27,21 @@ const Hero = () => {
             skill-building to reintegrate with confidence and purpose.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <Button className="bg-emerald-600 text-white px-6 py-6 rounded-full text-sm font-medium shadow hover:bg-emerald-700 transition">
+            <Button
+              onClick={() =>
+                scroller.scrollTo("why-we-exist", {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                  offset: -70, // Adjust if you have a sticky navbar
+                })
+              }
+              className=" cursor-pointer bg-emerald-600 text-white px-6 py-6 rounded-full text-sm font-medium shadow hover:bg-emerald-700 transition"
+            >
               Learn More
             </Button>
             <Link href="/contact">
-              <Button className="border bg-white border-blue-900 text-blue-900 px-6 py-6 rounded-full text-sm font-medium hover:bg-blue-100 transition">
+              <Button className="cursor-pointer border bg-white border-blue-900 text-blue-900 px-6 py-6 rounded-full text-sm font-medium hover:bg-blue-100 transition">
                 Contact Us
               </Button>
             </Link>

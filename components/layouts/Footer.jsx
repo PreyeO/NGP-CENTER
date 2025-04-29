@@ -44,7 +44,7 @@ const Footer = () => {
             </a>
           </p>
           <p className="text-lg font-medium text-gray-200">
-            <strong>Office Address:</strong> 102 First Gate, Festac Town, Lagos
+            <strong>Office Address:</strong> 102 First Gate, Festac Town,
             102102, Lagos, Nigeria
           </p>
         </div>
