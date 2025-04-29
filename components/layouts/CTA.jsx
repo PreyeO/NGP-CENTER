@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const GetInvolved = () => {
   return (
@@ -26,13 +27,18 @@ const GetInvolved = () => {
             mission. Help us restore hope, dignity, and direction in the lives
             of vulnerable youth.
           </p>
+
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <Button className="bg-emerald-600 text-white px-6 py-6 rounded-full text-sm font-medium shadow hover:bg-emerald-700 transition">
-              Donate Now
-            </Button>
-            <Button className="border border-blue-900 bg-white text-blue-900 px-6 py-6 rounded-full text-sm font-medium hover:bg-blue-100 transition">
-              Become a Volunteer
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-emerald-600 text-white px-6 py-6 rounded-full text-sm font-medium shadow hover:bg-emerald-700 transition">
+                Donate Now
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button className="border border-blue-900 bg-white text-blue-900 px-6 py-6 rounded-full text-sm font-medium hover:bg-blue-100 transition">
+                Become a Volunteer
+              </Button>
+            </Link>
           </div>
         </motion.div>
 
