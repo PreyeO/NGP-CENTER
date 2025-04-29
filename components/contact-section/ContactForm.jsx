@@ -1,9 +1,47 @@
 "use client";
 
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
 const ContactForm = () => {
+  const formRef = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      // Set the time dynamically
+      const timeInput = formRef.current.querySelector("input[name='time']");
+      if (timeInput) {
+        timeInput.value = new Date().toLocaleString();
+      }
+
+      emailjs
+        .sendForm(
+          "service_j80ywhw", // Replace with your actual service ID
+          "template_fgdszer", // Replace with your actual template ID
+          formRef.current,
+          "7F1UyTEgRwv7kwgkj" // Replace with your EmailJS public key
+        )
+        .then(
+          (result) => {
+            console.log("Success:", result.text);
+            toast.success(
+              "Hello, your Message has been received. We will get back to you shortly!"
+            );
+            formRef.current.reset();
+          },
+          (error) => {
+            console.error("Failed:", error.text);
+            alert("Failed to send message. Please try again.");
+          }
+        );
+    }
+  };
+
   return (
     <section className="relative bg-gradient-to-b from-white to-emerald-50 py-24">
       <div className="max-w-5xl mx-auto px-6">
@@ -18,7 +56,11 @@ const ContactForm = () => {
             We’re listening — let’s talk
           </h2>
 
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form
+            ref={formRef}
+            onSubmit={sendEmail}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
             {/* Full Name */}
             <div>
               <label
@@ -53,7 +95,7 @@ const ContactForm = () => {
               />
             </div>
 
-            {/* Subject */}
+            {/* Subject (maps to {{title}} in template) */}
             <div className="md:col-span-2">
               <label
                 htmlFor="subject"
@@ -64,7 +106,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 id="subject"
-                name="subject"
+                name="title"
                 className="w-full px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
               />
             </div>
@@ -86,15 +128,19 @@ const ContactForm = () => {
               ></textarea>
             </div>
 
+            {/* Hidden Time Input */}
+            <input type="hidden" name="time" />
+
             {/* Submit Button */}
             <div className="md:col-span-2 flex justify-center mt-6">
               <Button
                 type="submit"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-full shadow-md transition duration-300"
+                className="  cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-6 rounded-full shadow-md transition duration-300"
               >
                 Send Message
               </Button>
             </div>
+            <ToastContainer />
           </form>
         </motion.div>
       </div>
