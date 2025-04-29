@@ -35,17 +35,15 @@ const Footer = () => {
             Contact Us
           </h3>
           <p className="text-lg font-medium text-gray-200">
-            <strong>Email:</strong>{" "}
+            102 First Gate, Festac Town, 102102, Lagos, Nigeria
+          </p>
+          <p className="text-lg font-medium text-gray-200">
             <a
               href="mailto:contact@npgcenter.org"
               className="text-emerald-400 hover:underline"
             >
               contact@npgcenter.org
             </a>
-          </p>
-          <p className="text-lg font-medium text-gray-200">
-            <strong>Office Address:</strong> 102 First Gate, Festac Town,
-            102102, Lagos, Nigeria
           </p>
         </div>
       </div>
