@@ -31,7 +31,7 @@ const Hero = () => {
         >
           <div className="relative w-full h-80 md:h-[450px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
             <Image
-              src="/hero-image.png"
+              src="/services.jpg"
               alt="Services Image"
               fill
               className="object-cover"
