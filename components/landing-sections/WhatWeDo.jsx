@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Wrench, Book, Users, Shield, Heart } from "lucide-react";
+import { Brain, Book, Users, Shield, Pill, HelpingHand } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -11,36 +12,18 @@ const services = [
       "Helping young people break harmful patterns and heal from trauma through licensed one-on-one support.",
   },
   {
-    title: "Skill Development Workshops",
-    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    title: "Trauma-Informed Therapy",
+    icon: <HelpingHand className="w-6 h-6 text-blue-600" />,
     description:
-      "Empowering through hands-on training in tailoring, tech, and trades for real-world independence.",
+      "Providing therapeutic support that understands the impact of trauma on young minds and helping them rebuild trust and resilience.",
   },
+
   {
-    title: "Educational Advancement",
-    icon: <Book className="w-6 h-6 text-yellow-600" />,
+    title: "Substance Abuse Recovery",
+    icon: <Pill className="w-6 h-6 text-red-600" />,
     description:
-      "Helping youth return to school or pursue scholarships and academic goals with confidence.",
-  },
-  {
-    title: "Family Reunification Support",
-    icon: <Users className="w-6 h-6 text-emerald-600" />,
-    description:
-      "Guiding fractured families through healing, forgiveness, and restoration — together.",
-  },
-  {
-    title: "Mental Health Support",
-    icon: <Heart className="w-6 h-6 text-red-600" />,
-    description:
-      "Offering support for emotional well-being through therapeutic programs tailored to individual needs.",
+      "Providing specialized support and rehabilitation for youths struggling with substance abuse, including counseling, detox programs, and long-term recovery planning.",
     bg: "from-red-100 to-red-50",
-  },
-  {
-    title: "Conflict Resolution Training",
-    icon: <Shield className="w-6 h-6 text-purple-600" />,
-    description:
-      "Teaching youth to manage conflict constructively and build peaceful relationships through skill-building workshops.",
-    bg: "from-purple-100 to-purple-50",
   },
 ];
 
@@ -98,12 +81,12 @@ const WhatWeDo = () => {
         </div>
 
         <motion.div whileHover={{ scale: 1.04 }} className="mt-16 text-center">
-          <a
+          <Link
             href="/services"
             className="inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-emerald-700 transition"
           >
-            See the Full Picture →
-          </a>
+            Learn More →
+          </Link>
         </motion.div>
       </div>
     </section>

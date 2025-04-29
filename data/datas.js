@@ -58,8 +58,8 @@ export const steps = [
   },
 ];
 export const menuItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "/aboutus" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
 ];
 

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left">
         {/* Logo Section */}
         <div className="flex justify-center lg:justify-start mb-6 lg:mb-0">
-          <NGPLogo />
+          <NGPLogo className="text-white" />
         </div>
 
         {/* About Section */}

@@ -1,9 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "../ui/button";
-import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -17,24 +14,12 @@ const Hero = () => {
           className="text-center lg:text-left max-w-xl"
         >
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
-            Restoring Hope,
-            <br />
-            <span className="text-emerald-600">Rebuilding Futures</span>
+            Our Services
           </h1>
           <p className="text-gray-700 mt-6 text-lg md:text-xl leading-relaxed">
-            NGP Correctional Center supports youth with guidance, therapy, and
-            skill-building to reintegrate with confidence and purpose.
+            We offer a range of services designed to support, educate, and
+            empower youth. Learn more about our impact.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <Button className="bg-emerald-600 text-white px-6 py-6 rounded-full text-sm font-medium shadow hover:bg-emerald-700 transition">
-              Learn More
-            </Button>
-            <Link href="/contact">
-              <Button className="border bg-white border-blue-900 text-blue-900 px-6 py-6 rounded-full text-sm font-medium hover:bg-blue-100 transition">
-                Contact Us
-              </Button>
-            </Link>
-          </div>
         </motion.div>
 
         {/* RIGHT IMAGE */}
@@ -47,7 +32,7 @@ const Hero = () => {
           <div className="relative w-full h-80 md:h-[450px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
             <Image
               src="/hero-image.png"
-              alt="Photo of a mentor guiding a young person with hope and care"
+              alt="Services Image"
               fill
               className="object-cover"
               priority
