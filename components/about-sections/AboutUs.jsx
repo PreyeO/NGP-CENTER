@@ -6,6 +6,25 @@ const AboutUs = () => {
   return (
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-6 md:px-12 space-y-16">
+        {/* INTRODUCTION with START YEAR */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+            Who We Are
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Founded in 2015, NGP Correctional Center has been a beacon of hope
+            for youth in crisis. Over the years, we’ve helped hundreds of young
+            people break free from cycles of trauma, addiction, and
+            incarceration — guiding them toward brighter futures through care,
+            structure, and opportunity.
+          </p>
+        </motion.div>
+
         {/* MISSION */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -34,7 +34,7 @@ const Hero = () => {
         >
           <div className="relative w-full h-80 md:h-[450px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
             <img
-              src="/about-hero.jpg" // Add this image or change it accordingly
+              src="/volunteers.jpg" // Add this image or change it accordingly
               alt="NGP team supporting youth"
               className="object-cover w-full h-full"
             />
