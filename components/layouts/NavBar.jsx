@@ -8,7 +8,7 @@ const NavBar = () => {
     <nav className=" bg-green-800 z-50 flex justify-between items-center p-6 ">
       <NGPLogo className="text-white" />
       <Link href="/contact">
-        <Button>Contact Us</Button>
+        <Button className="py-6 px-6">Contact Us</Button>
       </Link>
     </nav>
   );
