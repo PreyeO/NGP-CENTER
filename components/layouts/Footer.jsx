@@ -1,0 +1,64 @@
+"use client";
+
+import { motion } from "framer-motion";
+import NGPLogo from "../ui/logo";
+
+const Footer = () => {
+  return (
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="bg-gray-900 text-white py-16"
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left">
+        {/* Logo Section */}
+        <div className="flex justify-center lg:justify-start mb-6 lg:mb-0">
+          <NGPLogo />
+        </div>
+
+        {/* About Section */}
+        <div className="flex flex-col items-center lg:items-start">
+          <h3 className="text-2xl font-semibold text-gray-300 mb-4">
+            About NGP
+          </h3>
+          <p className="text-lg text-gray-300">
+            NGP Correctional Center offers mentorship and skill-building
+            programs for youth to help them reintegrate into society with
+            confidence and purpose.
+          </p>
+        </div>
+
+        {/* Contact Section */}
+        <div className="flex flex-col items-center lg:items-start">
+          <h3 className="text-2xl font-semibold text-gray-300 mb-4">
+            Contact Us
+          </h3>
+          <p className="text-lg font-medium text-gray-200">
+            <strong>Email:</strong>{" "}
+            <a
+              href="mailto:contact@npgcenter.org"
+              className="text-emerald-400 hover:underline"
+            >
+              contact@npgcenter.org
+            </a>
+          </p>
+          <p className="text-lg font-medium text-gray-200">
+            <strong>Office Address:</strong> 102 First Gate, Festac Town, Lagos
+            102102, Lagos, Nigeria
+          </p>
+        </div>
+      </div>
+
+      {/* Copyright Section */}
+      <div className="text-center mt-12 border-t border-gray-700 pt-6">
+        <p className="text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} NGP Correctional Center. All rights
+          reserved.
+        </p>
+      </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;
