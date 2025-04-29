@@ -16,7 +16,7 @@ const WhyWeExist = () => {
           className="w-full md:w-1/2 relative rounded-3xl shadow-2xl overflow-hidden border border-gray-200 h-[420px] md:h-[500px]" // Added height
         >
           <Image
-            src="/hero-image.png"
+            src="/therapy.png"
             alt="Youth in a counseling session or group mentorship"
             layout="fill"
             className="object-cover"

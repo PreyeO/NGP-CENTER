@@ -12,46 +12,39 @@ import {
 
 const successStories = [
   {
-    title: "Overcoming Addiction and Finding Purpose",
-    name: "Jake Thompson",
+    title: "Rebuilding My Life After Addiction",
+    name: "Jake Bakere, 19",
     story:
-      "Jake struggled with drug addiction for years. After joining our recovery program, he turned his life around. Today, Jake is sober, enrolled in a vocational training program, and is working toward becoming a counselor to help others battling addiction.",
-    image: "/hero-image.jpg",
+      "Before joining the program, I was lost in drug addiction. The therapy and substance abuse recovery support at NGP Correctional Center gave me the strength to fight my addiction. I’m sober now.",
+    image: "/addiction.jpg",
   },
   {
-    title: "Healing from Trauma and Rebuilding a Future",
-    name: "Sarah Mitchell",
+    title: "I  thought I’d never trust anyone again.",
+    name: "Ifeoma Okeke., Age 16",
     story:
-      "Sarah entered the program after years of emotional trauma and abuse. Through intensive therapy and mentorship, she found healing and regained confidence. Sarah is now an advocate for mental health and works with survivors of abuse to help them rebuild their lives.",
-    image: "/hero-image.png",
-  },
-  {
-    title: "From Jail to Job: A Second Chance",
-    name: "Marcus Williams",
-    story:
-      "Marcus was incarcerated for a crime he deeply regrets. Through our rehabilitation and skill development program, he was able to turn his life around. Marcus now has a stable job, mentors other young men, and is determined to give back to the community that helped him.",
-    image: "/hero-image.png",
-  },
-  {
-    title: "Overcoming Addiction and Finding Purpose",
-    name: "Jake Thompson",
-    story:
-      "Jake struggled with drug addiction for years. After joining our recovery program, he turned his life around. Today, Jake is sober, enrolled in a vocational training program, and is working toward becoming a counselor to help others battling addiction.",
-    image: "/hero-image.png",
-  },
-  {
-    title: "Healing from Trauma and Rebuilding a Future",
-    name: "Sarah Mitchell",
-    story:
-      "Sarah entered the program after years of emotional trauma and abuse. Through intensive therapy and mentorship, she found healing and regained confidence. Sarah is now an advocate for mental health and works with survivors of abuse to help them rebuild their lives.",
-    image: "/hero-image.png",
+      "Trauma haunted me for years. But here, I found safety. I found people who genuinely cared. Each therapy session helped me breathe again, and I finally believe I deserve peace.",
+    image: "/ifeoma.jpg",
   },
   {
     title: "From Jail to Job: A Second Chance",
-    name: "Marcus Williams",
+    name: "Musa Abubakar, 20",
     story:
-      "Marcus was incarcerated for a crime he deeply regrets. Through our rehabilitation and skill development program, he was able to turn his life around. Marcus now has a stable job, mentors other young men, and is determined to give back to the community that helped him.",
-    image: "/hero-image.png",
+      "After spending time incarcerated, I never thought I’d get a second chance. NGP’s rehabilitation program taught me the skills I needed to get back on my feet. Now, I have a stable job.",
+    image: "/working.jpg",
+  },
+  {
+    title: "From Despair to Purpose: Finding My Path",
+    name: "Godson Thompson, 17",
+    story:
+      "After years of struggling with anger and poor decisions. The behavioral counseling and conflict resolution workshops thought me how to control my emotions and handle situations with wisdom.",
+    image: "/education.jpg",
+  },
+  {
+    title: "Reconnecting with My Family Through Support",
+    name: "Sarah Babatunde, 20",
+    story:
+      "My family was broken, and I didn’t know how to fix it. The family reunification support at NGP helped me repair the strained relationships I had with my family. We now communicate openly. ",
+    image: "/family.jpg",
   },
 ];
 
@@ -91,6 +84,9 @@ const SuccessStories = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       {story.title}
                     </h3>
+                    <p className="text-sm text-gray-500 italic mb-2">
+                      {story.name}
+                    </p>
                     <p className="text-gray-700 text-base">{story.story}</p>
                   </div>
                 </div>

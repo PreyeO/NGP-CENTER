@@ -46,7 +46,7 @@ const GetInvolved = () => {
         >
           <div className="relative w-full h-80 md:h-[450px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
             <Image
-              src="/hero-image.png" // Replace with your relevant image
+              src="/hands.jpg" // Replace with your relevant image
               alt="Volunteers and supporters engaging with youth"
               fill
               className="object-cover"
