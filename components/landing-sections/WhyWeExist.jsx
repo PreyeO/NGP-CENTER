@@ -6,20 +6,20 @@ import Image from "next/image"; // Assuming you're using Next.js for image optim
 const WhyWeExist = () => {
   return (
     <section
-      className="relative py-20 bg-white overflow-hidden"
+      className="relative md:py-20 py-10 bg-white overflow-hidden"
       id="why-we-exist"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center md:gap-16 gap-8">
         {/* IMAGE / VISUAL */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="w-full md:w-1/2 relative rounded-3xl shadow-2xl overflow-hidden border border-gray-200 h-[420px] md:h-[500px]" // Added height
+          className="w-full md:w-1/2 relative rounded-3xl shadow-2xl overflow-hidden border border-gray-200  h-50 md:h-[450px]" // Added height
         >
           <Image
-            src="/therapy.png"
+            src="/therapy1.jpg"
             alt="Youth in a counseling session or group mentorship"
             layout="fill"
             className="object-cover"
@@ -34,10 +34,10 @@ const WhyWeExist = () => {
           viewport={{ once: true }}
           className="w-full md:w-1/2"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 md:mb-6 mb-3">
             Why We Are Here
           </h2>
-          <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+          <p className="text-gray-700 md:text-lg text-base md:mb-6 mb-3 leading-relaxed">
             Behind every troubled youth is a story waiting to be rewritten. At
             NGP Correctional Center, we’re here to help them reclaim that story
             — with compassion, structure, and renewed hope.

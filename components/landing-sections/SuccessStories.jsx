@@ -50,13 +50,13 @@ const successStories = [
 
 const SuccessStories = () => {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white md:py-24 py-12">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-gray-900 mb-12 text-center"
+          className="md:text-4xl text-3xl font-bold text-gray-900 md:mb-12 mb-6 text-center"
         >
           Our Success Stories
         </motion.h2>
@@ -72,8 +72,8 @@ const SuccessStories = () => {
             {successStories.map((story, index) => (
               <CarouselItem key={index} className="sm:basis-full lg:basis-1/3">
                 <div className="p-4">
-                  <div className="bg-gray-50 p-8 rounded-3xl shadow-md hover:shadow-lg transition transform hover:scale-105">
-                    <div className="relative w-full h-64 mb-4 rounded-3xl overflow-hidden">
+                  <div className="bg-gray-50 md:p-8 p-4 rounded-3xl shadow-md hover:shadow-lg transition transform hover:scale-105">
+                    <div className="relative w-full h-50 md:mb-4 rounded-3xl overflow-hidden">
                       <Image
                         src={story.image}
                         alt={`Photo of ${story.name}`}
@@ -81,13 +81,15 @@ const SuccessStories = () => {
                         className="object-cover"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {story.title}
                     </h3>
-                    <p className="text-sm text-gray-500 italic mb-2">
+                    <p className="md:text-sm text-[12px] text-gray-500 italic mb-2">
                       {story.name}
                     </p>
-                    <p className="text-gray-700 text-base">{story.story}</p>
+                    <p className="text-gray-700 text-sm md:text-base">
+                      {story.story}
+                    </p>
                   </div>
                 </div>
               </CarouselItem>

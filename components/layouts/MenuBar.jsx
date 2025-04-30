@@ -26,7 +26,7 @@ const MenuBar = () => {
         </Link>
       ))}
       <Link href="/contact">
-        <Button className="cursor-pointer  bg-gradient-to-r from-[#059669] to-[#3B82F6] text-white mx-12 py-4 rounded-full border-2 border-[#ea9fa8] transition-all hover:scale-105 hover:from-[#3B82F6] hover:to-[#059669] hover:bg-opacity-80 hover:border-[#3B82F6]">
+        <Button className="cursor-pointer  bg-gradient-to-r from-[#059669] to-[#3B82F6] text-white md:mx-12 py-4 rounded-full border-2  transition-all hover:scale-105 hover:from-[#3B82F6] hover:to-[#059669] hover:bg-opacity-80 hover:border-[#3B82F6]">
           Contact Us
         </Button>
       </Link>

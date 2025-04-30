@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative bg-blue-50 py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+    <section className="relative bg-blue-50 md:py-20 py-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-between md:gap-12 gap-6">
         {/* TEXT SECTION */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl text-center lg:text-left"
+          className="max-w-xl text-center lg:text-left"
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-blue-900 leading-tight">
             Every Story Deserves
             <br />
             <span className="text-emerald-600">a Second Chapter</span>
           </h1>
-          <p className="text-gray-700 mt-6 text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-700 mt-6 text-base md:text-xl leading-relaxed">
             Behind our programs is a deep belief that no young person is beyond
             help. This is the story of how NGP Correctional Center became a
             place where broken stories are rewritten with hope.

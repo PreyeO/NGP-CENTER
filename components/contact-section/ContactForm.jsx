@@ -43,23 +43,23 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-emerald-50 py-24">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="relative bg-gradient-to-b from-white to-emerald-50 py-12 md:py-24">
+      <div className="max-w-5xl mx-auto md:px-6 px-3">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="bg-white/70 backdrop-blur-md p-10 rounded-3xl shadow-2xl border border-gray-100"
+          className="bg-white/70 backdrop-blur-md md:p-10 p-8 rounded-3xl shadow-2xl border border-gray-100"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-900 text-center mb-10">
-            We’re listening — let’s talk
+          <h2 className="text-xl md:text-4xl font-semibold text-blue-900 text-center mb-5 md:mb-10">
+            Let’s talk
           </h2>
 
           <form
             ref={formRef}
             onSubmit={sendEmail}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6"
           >
             {/* Full Name */}
             <div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+                className="w-full px-2 md:px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
               />
             </div>
 
@@ -91,7 +91,7 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+                className="w-full  px-2 md:px-4  py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
               />
             </div>
 
@@ -107,7 +107,7 @@ const ContactForm = () => {
                 type="text"
                 id="subject"
                 name="title"
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+                className="w-full  px-2 md:px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
               />
             </div>
 
@@ -124,7 +124,7 @@ const ContactForm = () => {
                 name="message"
                 rows={6}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+                className="w-full  px-2 md:px-4  py-3 rounded-xl border border-gray-300 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"
               ></textarea>
             </div>
 
@@ -132,7 +132,7 @@ const ContactForm = () => {
             <input type="hidden" name="time" />
 
             {/* Submit Button */}
-            <div className="md:col-span-2 flex justify-center mt-6">
+            <div className="md:col-span-2 flex justify-center mt-3  md:mt-6">
               <Button
                 type="submit"
                 className="  cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-6 rounded-full shadow-md transition duration-300"
@@ -140,7 +140,12 @@ const ContactForm = () => {
                 Send Message
               </Button>
             </div>
-            <ToastContainer />
+            <ToastContainer
+              position="bottom-center"
+              toastClassName={() =>
+                "bg-emerald-600 text-white font-medium rounded-lg shadow-lg"
+              }
+            />
           </form>
         </motion.div>
       </div>

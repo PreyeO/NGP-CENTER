@@ -29,7 +29,7 @@ const services = [
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-[#F4F8FB] py-24">
+    <section className="bg-[#F4F8FB] md:py-24 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const WhatWeDo = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-gray-900 mb-6 text-center"
+          className="md:text-4xl text-3xl font-bold text-gray-900 md:mb-6 mb-3 text-center"
         >
           What We Do
         </motion.h2>
@@ -53,14 +53,14 @@ const WhatWeDo = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-gray-700 max-w-3xl mb-12 text-center mx-auto"
+          className="md:text-lg text-base text-gray-700 max-w-3xl md:mb-12 mb-6 text-center mx-auto"
         >
           Every young life has a story. We don’t rescue — we restore. With
           therapy, mentorship, and tangible support, we walk alongside them
           toward wholeness.
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-8 gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -80,7 +80,10 @@ const WhatWeDo = () => {
           ))}
         </div>
 
-        <motion.div whileHover={{ scale: 1.04 }} className="mt-16 text-center">
+        <motion.div
+          whileHover={{ scale: 1.04 }}
+          className="md:mt-16 mt-8 text-center"
+        >
           <Link
             href="/services"
             className=" cursor-pointer inline-block bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-emerald-700 transition"

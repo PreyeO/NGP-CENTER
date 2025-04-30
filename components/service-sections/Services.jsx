@@ -59,13 +59,13 @@ const serviceCategories = [
 
 const Services = () => {
   return (
-    <section className="bg-[#F4F8FB] py-24">
+    <section className="bg-[#F4F8FB] md:py-24 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-gray-900 mb-4 text-center"
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center"
         >
           Our Services
         </motion.h2>
@@ -74,7 +74,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-gray-700 max-w-3xl mb-12 text-center mx-auto"
+          className="text-base md:text-lg text-gray-700 max-w-3xl mb-6 md:mb-12 text-center mx-auto"
         >
           At NGP Correctional Center, we offer more than interventions — we
           offer transformation. Each service is intentionally designed to
@@ -83,17 +83,17 @@ const Services = () => {
         </motion.p>
 
         {serviceCategories.map((group, i) => (
-          <div key={group.category} className="mb-16">
+          <div key={group.category} className="md:mb-16 mb-8">
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-2xl font-semibold text-emerald-700 mb-6 border-b border-emerald-200 pb-2"
+              className="md:text-2xl text-lg font-semibold text-emerald-700 mb-3 md:mb-6 border-b border-emerald-200 pb-2"
             >
               {group.category}
             </motion.h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-8 gap-4">
               {group.services.map((service, index) => (
                 <motion.div
                   key={service.title}
@@ -102,13 +102,13 @@ const Services = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition hover:scale-[1.02]"
                 >
-                  <div className="bg-emerald-50 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  <div className="bg-emerald-50 rounded-full w-12 h-12 flex items-center justify-center mb-2 md:mb-4">
                     {service.icon}
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h4 className=" text-base md:text-xl font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h4>
-                  <p className="text-gray-700 text-base leading-relaxed">
+                  <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                     {service.description}
                   </p>
                 </motion.div>
